@@ -1,4 +1,4 @@
-# Whisper Evaluation Tool
+# Audio Transcription Tool
 
 A speech transcription and diarization tool that uses [WhisperX](https://github.com/m-bain/whisperX) as a library, providing enhanced output capabilities for audio transcription.
 
