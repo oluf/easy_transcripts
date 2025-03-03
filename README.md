@@ -1,14 +1,14 @@
 # Whisper Evaluation Tool
 
-A speech transcription and diarization tool built on top of [WhisperX](https://github.com/m-bain/whisperX), providing enhanced output capabilities for audio transcription.
+A speech transcription and diarization tool that uses [WhisperX](https://github.com/m-bain/whisperX) as a library, providing enhanced output capabilities for audio transcription.
 
 ## Overview
 
-This tool extends the functionality of WhisperX by adding convenient output formatting options. It transcribes audio files with speaker diarization and outputs the results in both JSON and text formats to make the transcriptions easily accessible for different use cases.
+This tool leverages WhisperX's powerful API to provide convenient output formatting options. It transcribes audio files with speaker diarization and outputs the results in both JSON and text formats to make the transcriptions easily accessible for different use cases.
 
 ## Features
 
-- **Accurate Speech Recognition**: Leverages WhisperX's powerful ASR capabilities with word-level timestamps
+- **Accurate Speech Recognition**: Uses WhisperX's powerful ASR capabilities with word-level timestamps
 - **Speaker Diarization**: Identifies different speakers in the audio
 - **Multiple Output Formats**:
   - JSON output with detailed information including timestamps and speaker labels
@@ -30,14 +30,19 @@ This tool extends the functionality of WhisperX by adding convenient output form
    cd whisper_eval
    ```
 
-2. Install the required dependencies:
+2. Install WhisperX and other dependencies:
+   ```
+   pip install git+https://github.com/m-bain/whisperX.git
+   ```
+
+   Or if you have a requirements.txt file:
    ```
    pip install -r requirements.txt
    ```
 
-3. Install WhisperX:
+   You can generate a requirements.txt file for your environment using:
    ```
-   pip install git+https://github.com/m-bain/whisperX.git
+   pip freeze > requirements.txt
    ```
 
 ## Usage
@@ -115,11 +120,11 @@ SPEAKER 02:
 Thanks for having me. Let's discuss the project.
 ```
 
-## Acknowledgements
+## Dependencies
 
-This project builds upon [WhisperX](https://github.com/m-bain/whisperX) by Max Bain et al., which provides fast automatic speech recognition with word-level timestamps and speaker diarization.
+This project uses [WhisperX](https://github.com/m-bain/whisperX) as a library dependency. WhisperX is a powerful tool developed by Max Bain et al. that provides fast automatic speech recognition with word-level timestamps and speaker diarization.
 
-If you use WhisperX in your research, please cite:
+If you're interested in the underlying technology, check out the WhisperX paper:
 ```
 @article{bain2022whisperx,
   title={WhisperX: Time-Accurate Speech Transcription of Long-Form Audio},
@@ -131,7 +136,9 @@ If you use WhisperX in your research, please cite:
 
 ## License
 
-This project is licensed under the terms of the [BSD-2-Clause license](https://github.com/m-bain/whisperX/blob/main/LICENSE), the same as WhisperX.
+This project is licensed under the terms of the [MIT License](LICENSE), which allows for both personal and commercial use with minimal restrictions.
+
+Note that WhisperX itself is licensed under the [BSD-2-Clause license](https://github.com/m-bain/whisperX/blob/main/LICENSE), but as we're using it as a library dependency rather than modifying its code, our project can use a different license.
 
 ## Contributing
 
