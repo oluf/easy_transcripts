@@ -138,8 +138,6 @@ If you're interested in the underlying technology, check out the WhisperX paper:
 
 This project is licensed under the terms of the [MIT License](LICENSE), which allows for both personal and commercial use with minimal restrictions.
 
-Note that WhisperX itself is licensed under the [BSD-2-Clause license](https://github.com/m-bain/whisperX/blob/main/LICENSE), but as we're using it as a library dependency rather than modifying its code, our project can use a different license.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. 
