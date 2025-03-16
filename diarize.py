@@ -24,7 +24,13 @@ def transcribe_audio(audio_path):
     aligned_segments = whisperx.align(result["segments"], model_a, metadata, audio, device)
 
     # Load Pyannote speaker diarization model
-    diarization_model = whisperx.DiarizationPipeline(use_auth_token=True, device=device)
+    diarization_model = whisperx.DiarizationPipeline(
+        use_auth_token=True,
+        device=device
+    )
+
+    # Explicitly set the speaker embedding model
+    diarization_model.speaker_model = "pyannote/embedding"
     diarized_result = diarization_model(audio_path)
 
     # Assign speakers
